@@ -33,7 +33,7 @@ end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
 # Use unicorn as the app server
 # gem 'unicorn'

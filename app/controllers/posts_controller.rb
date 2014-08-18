@@ -8,8 +8,10 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.new(params[:post].permit(:title))
-		@post.save
+		puts params
+		@post = Post.new(params[:post].permit(:title, :picture))
+		puts "*" * 1000
+		puts @post.save
 		redirect_to '/posts'
 	end
 end

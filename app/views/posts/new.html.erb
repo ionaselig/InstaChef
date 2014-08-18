@@ -1,4 +1,9 @@
-<%= form_for @post do |f| %>
-	<%= f.text_feild :title %>
-	<%= f.submit 'Create post' %>
+<%= form_for @post, html: { multipart: true} do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+
+	<%= f.label :picture %>
+	<%= f.file_field :picture %>	
+
+	<%= f.submit 'Create New Food Porn' %>
 <% end %>

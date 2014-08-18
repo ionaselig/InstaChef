@@ -1,9 +1,11 @@
-<%= if @posts.any? %>
+<h1>foooooood</h1>
+<%if @posts.any? %>
 	<% @posts.each do |post| %>
 		<h3><%= post.title %></h3>
+		<%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
 	<% end %>
 <% else %>
 	Food Porn Bank Empty
 <% end %>
 
-<% link_to 'New post', new_post_path %>
+<%= link_to 'Deposit Food Porn', new_post_path %>
