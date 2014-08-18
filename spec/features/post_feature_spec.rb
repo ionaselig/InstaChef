@@ -24,6 +24,7 @@ describe 'posts' do
 		visit '/posts'
 		click_link 'Deposit Food Porn'
 		fill_in 'Title', with: 'A brand new post'
+		
 
 		expect(page).to have_content 'A brand new post'
 		expect(current_path).to eq '/posts'
