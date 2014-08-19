@@ -1,4 +1,4 @@
-<h1>foooooood</h1>
+<h1>Instachef</h1>
 <%if @posts.any? %>
 	<% @posts.each do |post| %>
 		<h3><%= post.title %></h3>
@@ -10,4 +10,4 @@
 	Food Porn Bank Empty
 <% end %>
 
-<%= link_to 'Deposit Food Porn', new_post_path %>
+<button><%= link_to 'Deposit Food Porn', new_post_path %></button>
