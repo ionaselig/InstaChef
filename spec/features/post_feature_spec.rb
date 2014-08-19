@@ -34,7 +34,7 @@ describe 'posts' do
 			visit '/posts'
 			click_link 'Deposit Food Porn'
 			fill_in 'Title', with: 'A brand new post'
-			attach_file 'Picture', Rails.root.join('spec/images/burger.jpg')
+			attach_file 'Picture', Rails.root.join('spec/images/Churros.jpg')
 			click_button 'Create New Food Porn'
 
 			expect(page).to have_css 'img.uploaded-pic'
