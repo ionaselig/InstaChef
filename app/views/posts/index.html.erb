@@ -2,7 +2,9 @@
 <%if @posts.any? %>
 	<% @posts.each do |post| %>
 		<h3><%= post.title %></h3>
-		<%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
+		<% if post.picture.present? %>
+			<%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
+		<% end %>
 	<% end %>
 <% else %>
 	Food Porn Bank Empty
