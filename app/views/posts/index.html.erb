@@ -1,10 +1,13 @@
-<h1>Instachef</h1>
-<%if @posts.any? %>
+	<%if @posts.any? %>
+		<section class='row'>
+			<%= render @posts %>
+		</section>
+	<% else %>
+		Food Porn Bank Empty
+	<% end %>
 
-	<%= render @posts %>
+	<%= link_to new_post_path, class: 'btn btn-lg btn-success' do %>
+		<span class='hidden-xs'>Deposit Food Porn</span>
+		<span class="glyphicon glyphicon-pencil"></span>
 
-<% else %>
-	Food Porn Bank Empty
-<% end %>
-
-<button><%= link_to 'Deposit Food Porn', new_post_path %></button>
+	<% end %>
