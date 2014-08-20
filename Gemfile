@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
@@ -35,6 +35,7 @@ end
 # gem 'bcrypt', '~> 3.1.7'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 # Use unicorn as the app server
 # gem 'unicorn'
 
