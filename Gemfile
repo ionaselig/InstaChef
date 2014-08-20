@@ -36,6 +36,10 @@ end
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+
+group :production do
+	gem 'rails_12factor'
+end
 # Use unicorn as the app server
 # gem 'unicorn'
 
