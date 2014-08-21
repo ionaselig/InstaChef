@@ -6,7 +6,17 @@
 	/*max-width:250px;*/
 }
 
+@media(max-width: 767px) {
+	.post img {
+		display: block;
+		margin: 0 auto;
+	}
 
+	.post h3 {
+		color: Indian Red;
+		margin: 0 auto;
+	}
+}	
 
 .post {
 	img {
@@ -15,12 +25,13 @@
 
 	h3 {
 		margin-top: 0;
-		margin-bottom: 0
+		margin-bottom: 0;
 	}
 
 	.tags a {
 		background: #428bca;
 		color: white;
+		font-family: 'Blackout-Midnight';
 		font-size: 22px;
 		padding: 10px;
 		display: inline-block;

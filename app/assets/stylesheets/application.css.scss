@@ -18,10 +18,33 @@
 @import "bootstrap";
 
 body {
-	background-image: image-url('TOMATO.jpg');
-	background-size: 100%;
+	background-image: url('TOMATO.jpg');
+	background-size: 100% 100%;
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	margin-top: 60px;
+	margin-top: 70px;
+	color: #DDDDDD;
+	font-family: monospace;
 	}
+
+h1 {
+	font-family: 'Blackout-2am';
+	font-size: 30px;
+	color: #FFFFFF;
+}
+
+.navbar-header .navbar-brand {
+	font-family: '3Dumb';
+	font-size: 25px;
+}
+
+.navbar .form-control {
+	background-color: whitesmoke;
+}
+
+.container .panel {
+	 background-color: rgba(255, 255, 255, 0.5);
+}
+
+
