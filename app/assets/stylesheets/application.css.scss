@@ -18,6 +18,10 @@
 @import "bootstrap";
 
 body {
-	background-image: url ('instachef/app/spec/images/TOMATO.jpg');
+	background-image: image-url('TOMATO.jpg');
+	background-size: 100%;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	margin-top: 60px;
-}
+	}
