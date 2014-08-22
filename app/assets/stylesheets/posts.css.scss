@@ -6,21 +6,12 @@
 	/*max-width:250px;*/
 }
 
-@media(max-width: 767px) {
-	.post img {
-		display: block;
-		margin: 0 auto;
-	}
-
-	.post h3 {
-		color: Indian Red;
-		margin: 0 auto;
-	}
-}	
 
 .post {
 	img {
 		max-width: 100%;
+		display: block;
+		margin: 0 auto;
 	}
 
 	h3 {
@@ -41,3 +32,14 @@
 		margin-left: 10px;
 	}
 }
+
+@media(min-width: 767px) {
+	.post img {
+		display: inline
+	}
+
+	.post h3 {
+		color: Indian Red !important;
+		margin: 0 auto;
+	}
+}	
