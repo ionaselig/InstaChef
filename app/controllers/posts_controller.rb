@@ -13,5 +13,9 @@ class PostsController < ApplicationController
 		redirect_to '/posts'
 	end
 
+	def show
+		render json: @post
+	end
+
 end
 

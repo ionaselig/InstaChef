@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :posts do
-    resources :map
+    resource :map
     end 
 
   resources :tags 
