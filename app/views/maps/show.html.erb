@@ -1,4 +1,15 @@
+<div id='map'> #data-id='<%=post id %>'
+</div>
+
+
 <script>
+
+$.get('posts/11.json', function(post.info))
+var map = new GMaps ({
+	div: #map
+	lat: -12.043333
+	lng: -77.028333
+})
 
 GMaps.geocode({
   address: $('#address').val(),
