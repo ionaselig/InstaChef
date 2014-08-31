@@ -1,0 +1,19 @@
+<section class='add_post col-md-3'>
+
+<%= form_for @new_post, html: { multipart: true } do |f| %>
+
+	<%= f.text_field :title %>
+
+	<%= f.text_field :tag_list, data: {role:'tagsinput'} %>
+
+	<%= f.file_field :picture %>
+
+	<%= f.file_field :address %>
+
+	<%= hidden_field_tag :user_id, current_user.id %>
+
+	<%= f.submit 'Add post' %>
+
+<% end %>
+
+</section>

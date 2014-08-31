@@ -1,21 +1,27 @@
 class PostsController < ApplicationController
+
+	before_action :authenticate_user!, except: [:index]
+
 	def index
 		@posts = Post.all
-	end
+	end 
 
 	def new
 		@post = Post.new
 	end
 
 	def create
-		@post = Post.new(params[:post].permit(:title, :picture, :tag_list, :address))
+		@post = Post.new(params[:post].permit(:title, :picture, :tag_list, :address, :like))
+		@post.user = current_user
 		@post.save
-		redirect_to '/posts'
+		redirect_to '/'
 	end
 
 	def show
-		render json: @post
+		@post = Post.find(params[:id])
 	end
 
+	def edit
+		@post = Post.find(params[:user_id])
+	end 
 end
-

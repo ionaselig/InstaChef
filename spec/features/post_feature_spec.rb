@@ -32,6 +32,7 @@ describe 'posts' do
 
 		it 'can attach an image to the post' do
 			visit '/posts'
+			save_and_open_page
 			click_link 'Deposit Food Porn'
 			fill_in 'Title', with: 'A brand new post'
 			attach_file 'Picture', Rails.root.join('spec/images/Churros.jpg')

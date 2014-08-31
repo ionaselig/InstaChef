@@ -4,8 +4,12 @@
 
 .uploaded-pic {
 	/*max-width:250px;*/
+	max-height: 455px
 }
 
+.panel-body {
+	min-height: 455px
+}
 
 .post {
 	img {
@@ -42,4 +46,32 @@
 		color: black;
 		margin: 0 auto;
 	}
+
+	.panel-body .btn-danger {
+		border-color: #FFFFFF;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }	

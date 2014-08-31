@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <title>Instachef</title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -8,8 +9,19 @@
   </head>
 
   <body>
+  
 
-        <div class="dropdown hidden-xs">
+  <% if user_signed_in? %>
+   <header class="container">
+    <nav class="header">
+      <ul class="nav nav-pills pull-right">
+        <li class="active"> <%= link_to 'Home', root_path %></li>
+            <li> <%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+      </ul>
+    </nav>
+  </header>
+
+        <!-- <div class="dropdown hidden-xs">
     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="">
       Dropdown
       <span class="caret"></span>
@@ -21,10 +33,11 @@
       <li role="presentation" class="divider"></li>
       <li role="presentation"><a role="menuitem" tabindex="-1" href="user_uploads">My Photos</a></li>
     </ul>
-        </div>
+        </div> -->
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <% end %>
 
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -48,10 +61,10 @@
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
           </form>
-        </div><!--/.navbar-collapse -->
-      </div>
+        </div><!-- /.navbar-collapse -->
+       </div>
     </div>
-  
+    
 
     <main class='container'>
      <%= yield %>

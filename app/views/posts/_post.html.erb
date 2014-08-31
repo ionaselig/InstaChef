@@ -16,7 +16,7 @@
 				<%= link_to tag.text, tag %>	
 			<% end %>
 
-			<% unless post.address.blank? %>
+			<% if post.address.present? %>
 				<%= link_to 'Map', post_map_path(post), class: 'btn btn-danger'%>
 			<% end %>
 				

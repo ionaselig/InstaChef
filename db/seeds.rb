@@ -6,9 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-#Post.destroy_all
+Post.destroy_all
+
+def select_random_file
+	images_dir = Dir.new(Rails.root.join('spec/images'))
+	images = images_dir.entries.select {|entry| entry.include?(".jpg")}
+	File.new(Rails.root.join("spec/images/#{images.sample}"))
+end
 
 1.upto(10) do |n|
-	%w(#yolo #swag #lol #healthy #dirty #tbt #lunch #burger #salad #dinner #yum).join(', ')
-Post.create(title: 'Cool post #{n}', tag_list: tags, '#yolo, #swag'', picture: File.new(Rails.root.join 'spec/images/'))
+  tags = %w(#yolo #swag #lol #winnin #burger #salad #healthy #pornographic #glutenfree).sample(2).join(', ')
+  addresses = %w(london paris edinburgh madrid).sample
+  puts "Adding post number #{n}"
+  Post.create(title: "Cool post #{n}", tag_list: tags, address: addresses, picture: select_random_file)
 end
